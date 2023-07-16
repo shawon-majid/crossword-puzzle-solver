@@ -301,6 +301,7 @@ class CrosswordCreator():
         for value in values:
             newAssignment = assignment.copy()
             newAssignment[var] = value
+            self.ac3();
             if self.consistent(newAssignment):
                 result = self.backtrack(newAssignment)
                 if result != None:
